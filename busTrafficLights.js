@@ -8,7 +8,7 @@ var restbus  = require('restbus'),
     lat      = '37.765547';
 
 function buildPath(lat,lon) {
-  return '/locations/'+lat+','+lon+'/predictions'
+  return '/locations/'+lat+','+lon+'/predictions';
 }
 
 restbus.listen(port, function() {
@@ -31,13 +31,13 @@ restbus.listen(port, function() {
             route      = prediction.route.title,
             stop       = prediction.stop.title,
             distance   = prediction.stop.distance;
-            
+
         for (var values in prediction.values) {
           var value     = prediction.values[values],
               direction = value.direction.title,
               minutes   = value.minutes,
               debug     = agency+tab+route+tab+stop+tab+distance+tab+direction
-                        +tab+minutes;
+              +tab+minutes;
 
           console.log(debug);
         };
@@ -47,5 +47,5 @@ restbus.listen(port, function() {
     console.log("Got error: " + e.message);
   });
 
-  //process.exit(0);
+  // process.exit(0);
 });

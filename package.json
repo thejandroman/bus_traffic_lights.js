@@ -1,6 +1,10 @@
-"dependencies": {
-    "bancroft": "0.0.12",
-    "pi-gpio": "0.0.6",
-    "restbus": "1.1.0",
-    "i2c": "0.1.4"
+{
+    "dependencies": {
+        "bancroft": "0.0.13",
+        "pi-gpio": "0.0.8",
+        "restbus": "1.2.0",
+        "//": {
+            "i2c": "0.2.3"
+        }
+    }
 }
